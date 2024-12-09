@@ -1,8 +1,8 @@
-# Nerfies
+# Open-world Multimodal Perception
 
-This is the repository that contains source code for the [Nerfies website](https://nerfies.github.io).
+This is the repository that contains source code for the [Multimodal Perception website](https://nerfies.github.io).
 
-If you find Nerfies useful for your work please cite:
+If you find `Multimodal Perception` useful for your work please cite:
 
 
 ```
