@@ -81,20 +81,20 @@
           <h1 class="title is-1 publication-title">NERsocial: Efficient Named Entity Recognition Dataset Construction for Human-Robot Interaction Utilizing RapidNER</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://keunhong.com">Jesse Atuhurra</a><sup>1,2</sup>,</span>
+              <a href="https://www.2021atajesse.com/">Jesse Atuhurra</a><sup>1,2</sup>,</span>
             <span class="author-block">
-              <a href="https://utkarshsinha.com">Hidetaka Kamigaito</a><sup>1</sup>,</span>
+              <a href="https://sites.google.com/site/hidetakakamigaito">Hidetaka Kamigaito</a><sup>1</sup>,</span>
             <span class="author-block">
-              <a href="https://jonbarron.info">Hiroki Ouchi</a><sup>1</sup>,
+              <a href="https://hiroki13.github.io/">Hiroki Ouchi</a><sup>1</sup>,
             </span>
             <span class="author-block">
-              <a href="http://sofienbouaziz.com">Hiroyuki Shindo</a><sup>1</sup>,
+              <a href="https://www.hshindo.com/">Hiroyuki Shindo</a><sup>1</sup>,
             </span>
             <span class="author-block">
-              <a href="https://www.danbgoldman.com">Taro Watanabe</a><sup>1</sup>,
+              <a href="https://sites.google.com/site/tarowtnb/">Taro Watanabe</a><sup>1</sup>,
             </span>
             <span class="author-block">
-              <a href="https://homes.cs.washington.edu/~seitz/">Eric Nichols</a><sup>2</sup>,
+              <a href="https://www.jp.honda-ri.com/en/members/nichols-eric/">Eric Nichols</a><sup>2</sup>,
             </span>
           </div>
           <div class="is-size-5 publication-authors">
@@ -123,7 +123,7 @@
                 </a>
               </span>
               <span class="link-block">
-                <a href="https://github.com/google/nerfies"
+                <a href="https://github.com/jatuhurrra/rapidner"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                     <i class="fab fa-github"></i>
@@ -132,7 +132,7 @@
                 </a>
               </span>
               <span class="link-block">
-                <a href="https://github.com/google/nerfies/releases/tag/0.1"
+                <a href="https://github.com/jatuhurrra/rapidner/tree/main/data"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                     <i class="far fa-images"></i>
@@ -157,36 +157,88 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We present the first method capable of photorealistically reconstructing a non-rigidly
-            deforming scene using photos/videos captured casually from mobile phones.
-          </p>
-          <p>
-            Our approach augments neural radiance fields
-            (NeRF) by optimizing an
-            additional continuous volumetric deformation field that warps each observed point into a
-            canonical 5D NeRF.
-            We observe that these NeRF-like deformation fields are prone to local minima, and
-            propose a coarse-to-fine optimization method for coordinate-based models that allows for
-            more robust optimization.
-            By adapting principles from geometry processing and physical simulation to NeRF-like
-            models, we propose an elastic regularization of the deformation field that further
-            improves robustness.
-          </p>
-          <p>
-            We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie
-            photos/videos into deformable NeRF
-            models that allow for photorealistic renderings of the subject from arbitrary
-            viewpoints, which we dub <i>"nerfies"</i>. We evaluate our method by collecting data
-            using a
-            rig with two mobile phones that take time-synchronized photos, yielding train/validation
-            images of the same pose at different viewpoints. We show that our method faithfully
-            reconstructs non-rigidly deforming scenes and reproduces unseen views with high
-            fidelity.
+            Adapting named entity recognition (NER) methods to new domains poses significant challenges. 
+            We introduce RapidNER, a framework designed for the rapid deployment of NER systems through efficient dataset construction. 
+            RapidNER operates through three key steps: (1) extracting domain-specific sub-graphs and triples from a general knowledge graph, 
+            (2) collecting and leveraging texts from various sources to build the NERsocial dataset, which focuses on entities typical in human-robot interaction, 
+            and (3) implementing an annotation scheme using Elasticsearch (ES) to enhance efficiency. 
+            NERsocial, validated by human annotators, includes six entity types, 153K tokens, and 99.4K sentences,
+            demonstrating RapidNER's capability to expedite dataset creation.
           </p>
         </div>
       </div>
     </div>
     <!--/ Abstract. -->
+
+     <!-- Related Links (Concurrent Work). -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Introduction</h2>
+
+        <div class="content has-text-justified">
+          <p>
+            The natural language processing (NLP) field has
+            grown substantially in recent years, surpassing expectations and creating many new applications.
+            NLP applications are manifestations of NLP tasks,
+            such as information extraction, text generation, language modeling, and the like.
+          </p>
+          <p>
+          Yet, despite all the progress, adapting existing
+          information extraction systems for NER to new
+          domains and entity types remains a challenge, a
+          fact that is compounded by the need to develop new
+          datasets representative of the new domain, followed
+          by fine-tuning NER classifiers to correctly detect
+          new entity types in the new domain.
+          </p>
+          <p>
+            Recognizing the need to create NER datasets for
+            new domains and entity types efficiently, we make
+            two succinct contributions: 1) We propose a framework RapidNER to annotate NER datasets by utilizing off-the-shelf tools. Specifically, we exploit the
+            search functions inside ES and successfully develop
+            an annotation method for NER data. 2) We focus on human-robot interaction (HRI) applications and
+            develop a new dataset named NERsocial comprising the entity types that are suitable for interaction
+            between humans and a social robot1 (Figure 1).
+            Consequently, we sought texts that represent the
+            natural conversational style embedded in human
+            dialogue. Our textual sources include social media
+            (Reddit) and online forums (Stack Exchange). Aiming for diversity in texts, we included Wikipedia as
+            a complimentary textual source, which provides a
+            rich contextual narrative for all entities. Figure 2 shows all the textual sources.
+          </p>
+          <p>
+          NERsocial is not the first attempt by NER researchers to design new specifications of NE labels
+          to develop NER datasets suited for new domains.
+          We follow the footsteps of domain-specific and unconventional efforts, such as Epure and Hennequin
+          (2023), to create our NER dataset NERsocial. NERsocial consists of six entity types drinks, foods, hobbies, jobs, pets, and sports which are typical
+            of social interactions in HRI, and Figure 1 shows
+            an example of a human-robot dialogue. While cre-
+            ating NERsocial, we needed to acquire knowledge
+            about each entity type. Consequently, we sought to
+            answer the research question how can we quickly
+            gather entity information relevant to unseen enti-
+            ties, such as pets? Hence, we chose the KG ap-
+            proach to gather such entity knowledge in the form
+            of KG triples which guided the development of our
+            NER dataset. This process is summarized in Fig-
+            ure 3. In addition, KG triples enabled us to solve
+            another problem, that is, how to increase the cov-
+            erage and diversity of each NE? Concretely, KG
+            triples guided the extraction of a large number of
+            diverse pages (articles) from Wikipedia. In turn,
+            the pages were the source of sentences used to con-
+            struct the dataset coupled with the texts gathered
+            from social media and online forums. The last chal-
+            lenge we faced was: how to annotate the thousands
+            of sentences with less human effort? We utilized
+            the search functions inside Elasticsearch to develop
+            an annotation scheme that took only a few seconds
+            to mark spans of entity mentions.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Related Links. -->
 
     <!-- Related Links (Concurrent Work). -->
     <div class="columns is-centered">
