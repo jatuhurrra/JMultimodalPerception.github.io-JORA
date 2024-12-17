@@ -1,20 +1,26 @@
-# Open-world Multimodal Perception
+# NERsocial: Efficient Named Entity Recognition Dataset Construction
 
-This is the repository that contains source code for the [Multimodal Perception website](https://nerfies.github.io).
+This is the repository that contains source code for the [NERsocial website](https://jatuhurrra.github.io/Rapid/).
 
-If you find `Multimodal Perception` useful for your work please cite:
+If you find `NERsocial` useful for your work please cite:
 
 
 ```
-Citation coming soon
+@misc{atuhurra2024nersocialefficientnamedentity,
+  title={NERsocial: Efficient Named Entity Recognition Dataset Construction for Human-Robot Interaction Utilizing RapidNER}, 
+  author={Jesse Atuhurra and Hidetaka Kamigaito and Hiroki Ouchi and Hiroyuki Shindo and Taro Watanabe},
+  year={2024},
+  eprint={2412.09634},
+  archivePrefix={arXiv},
+  primaryClass={cs.CL},
+  url={https://arxiv.org/abs/2412.09634}, 
+}
 ```
 
-# Acknowledgement
+# Template Acknowledgement
 This website is adapted from the [Nerfies website](https://nerfies.github.io), licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />
 
 Hence, this work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a> too.
 
 ## Usage and License Notices: 
-The data, code and checkpoint is intended and licensed for research use only. 
-They are also restricted to uses that follow the license agreement of Qwe2n-VL, GPT-4o, and Claude-3.5-Sonnet. 
-The dataset is CC BY NC 4.0 (allowing only non-commercial use), and models trained using the dataset should not be used outside of research purposes.
+The data is provided under an MIT license, so feel free to use it outside of research purposes.
