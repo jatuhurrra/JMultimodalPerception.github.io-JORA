@@ -178,7 +178,7 @@
           <!-- Figure floated to the right, with text wrapped around it -->
           <object data="./static/images/introJob.pdf" 
                   type="application/pdf" 
-                  style="float: right; width:25%; height:auto; margin:0 0 1em 1em;">
+                  style="float: right; width:40%; height:auto; margin:0 0 1em 1em;">
           </object>
           <p>
             The natural language processing (NLP) field has grown substantially in recent years, surpassing expectations and creating many new applications.
@@ -229,22 +229,58 @@
       </div>
     </div>
 
-    <!-- Three Figures in a Row -->
-    <div class="columns is-centered">
-      <div class="column has-text-centered">
-        <object data="./static/images/SourcesOfText2.pdf" type="application/pdf" style="width:100%; height:5cm;"></object>
-        <p>Figure 1: Sources of Text</p>
-      </div>
-      <div class="column has-text-centered">
-        <object data="./static/images/WikipediaPageSections.pdf" type="application/pdf" style="width:100%; height:5cm;"></object>
-        <p>Figure 2: Wikipedia Page Sections</p>
-      </div>
-      <div class="column has-text-centered">
-        <object data="./static/images/ElasticAnnotationProcess.pdf" type="application/pdf" style="width:100%; height:5cm;"></object>
-        <p>Figure 3: Elastic Annotation Process</p>
-      </div>
-    </div>
+       <!-- Three Figures in a Two-Row Layout -->
+        <!-- First row: Two figures side by side -->
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <object data="./static/images/SourcesOfText2.pdf" type="application/pdf" style="width:100%; height:5cm;"></object>
+            <p>Figure 1: Sources of Text</p>
+          </div>
+          <div class="column has-text-centered">
+            <object data="./static/images/WikipediaPageSections.pdf" type="application/pdf" style="width:100%; height:5cm;"></object>
+            <p>Figure 2: Wikipedia Page Sections</p>
+          </div>
+        </div>
+        
+        <!-- Second row: One figure spanning the full width -->
+        <div class="columns is-centered">
+          <div class="column has-text-centered is-full-width">
+            <object data="./static/images/ElasticAnnotationProcess.pdf" type="application/pdf" style="width:100%; height:5cm;"></object>
+            <p>Figure 3: Elastic Annotation Process</p>
+          </div>
+        </div>
     <!--/ Dataset Creation Section Figures -->
+
+    <!-- Data characteristics Section -->
+      <section class="section">
+        <div class="container is-max-desktop">
+          <h2 class="title is-3">Data characteristics</h2>
+          <div class="content has-text-justified">
+            <p>
+              The characteristics of NERsocial are shown in Table 4. Overall, there are 153,102 entity tokens, 
+              134,074 entities, and 99,448 sentences for six entity types. We gathered most of the entity 
+              information from Stack Exchange. Table 6 shows a comparison between NERsocial and common 
+              NER datasets: OntoNotes, WikiGold, CoNLL2003, WNUT17, I2B2 and FEW-NERD.
+            </p>
+          </div>
+      
+          <div class="columns is-centered">
+            <div class="column has-text-centered is-narrow">
+              <object data="./static/images/NERsocialNE.pdf" type="application/pdf" style="width:70%; height:auto;"></object>
+              <p>Figure: NERsocial Entity Distribution</p>
+            </div>
+          </div>
+      
+          <div class="columns is-centered">
+            <div class="column has-text-centered is-narrow">
+              <object data="./static/images/NERsocialDatasets.pdf" type="application/pdf" style="width:70%; height:auto;"></object>
+              <p>Figure: NERsocial vs. Other Datasets</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    <!--/ Data characteristics Section -->
+
 
     <!-- Related Links Section -->
     <div class="columns is-centered">
