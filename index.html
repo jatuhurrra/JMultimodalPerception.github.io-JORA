@@ -212,9 +212,24 @@
         <h2 class="title is-3">Elasticsearch Annotation Scheme</h2>
         <div class="content has-text-justified">
           <p>
-            We collected the texts from three sources: Wikipedia, online forums (Stack Exchange) and social media (Reddit). 
-            The red box indicates sections containing the texts that we are interested in, for each textual source.
+            Our Elasticsearch (ES) annotation scheme represents an efficient approach to annotating named entity recognition datasets, significantly reducing the required time and effort. 
+            While manual annotation methods like `Doccano` typically take about 1 minute per sentence, the ES scheme accomplishes the same task in just 0.9 milliseconds. 
+            The process begins with importing sentences into ES as CSV files, using specific mapping configurations that support the `"fast vector highlighter"` (fvh) capability. 
+            This is achieved by setting `"term_vector":"with_positions_offsets"` on the text column. 
+            The `fvh` feature is crucial as it ensures compound terms remain intact during searches and enables perfect string matching. 
+            ES then searches for entity mentions using dictionaries derived from `Wikidata KG` knowledge base, automatically marking matching text spans with `<em>` tags. 
+            This allows for rapid annotation of thousands of sentences simultaneously, after which human annotators verify and correct the ES-generated annotations before 
+              converting the marked spans to BIO tags for the final NER dataset.
           </p>
+          <p>
+            We selected Elasticsearch for this task due to its unique search capabilities that make it particularly suitable for entity annotation. 
+            The `fast vector highlighter` allows for accurate matching of multi-word entities, while ES's efficient search capabilities enable it to process large volumes of 
+            text quickly when finding entity mentions. The search space is defined by entity dictionaries obtained from Wiki-KG, and 
+            ES provides high-speed full text search with good precision in matching. The system's scalability allows it to process thousands of sentences 
+            rapidly while maintaining annotation quality through its automated approach. This methodology represents a significant improvement over fully 
+            manual annotation methods in terms of both time and cost efficiency, while still ensuring accurate and reliable entity recognition results 
+            through human verification of the machine-generated annotations.
+          </p> 
           <p>
             Yet....
           </p>
