@@ -21,8 +21,7 @@
   <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
   <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
   <!-- 
   <link rel="icon" href="./static/images/favicon.svg">
@@ -137,7 +136,6 @@
   </div>
 </section>
 
-<!-- Abstract Section -->
 <section class="section">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
@@ -145,11 +143,11 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Adapting named entity recognition (NER) methods to new domains poses significant challenges. 
-            We introduce RapidNER, a framework designed for the rapid deployment of NER systems through efficient dataset construction. 
-            RapidNER operates through three key steps: (1) extracting domain-specific sub-graphs and triples from a general knowledge graph, 
-            (2) collecting and leveraging texts from various sources to build the NERsocial dataset, which focuses on entities typical in human-robot interaction, 
-            and (3) implementing an annotation scheme using Elasticsearch (ES) to enhance efficiency. 
+            Adapting named entity recognition (NER) methods to new domains poses significant challenges.
+            We introduce RapidNER, a framework designed for the rapid deployment of NER systems through efficient dataset construction.
+            RapidNER operates through three key steps: (1) extracting domain-specific sub-graphs and triples from a general knowledge graph,
+            (2) collecting and leveraging texts from various sources to build the NERsocial dataset, which focuses on entities typical in human-robot interaction,
+            and (3) implementing an annotation scheme using Elasticsearch (ES) to enhance efficiency.
             NERsocial, validated by human annotators, includes six entity types, 153K tokens, and 99.4K sentences,
             demonstrating RapidNER's capability to expedite dataset creation.
           </p>
@@ -159,7 +157,6 @@
   </div>
 </section>
 
-<!-- Introduction Section -->
 <section class="section">
   <div class="container is-max-desktop">
     <div class="columns is-centered">
@@ -175,28 +172,36 @@
             NLP applications are manifestations of NLP tasks, such as information extraction, text generation, language modeling, and the like.
           </p>
           <p>
-            Yet, despite all the progress, adapting existing information extraction systems for NER to new domains and entity types remains a challenge, a fact that is compounded by the need to develop new
-            datasets representative of the new domain, followed by fine-tuning NER classifiers to correctly detect new entity types in the new domain.
+            Yet, despite all the progress, adapting existing information extraction systems for NER to new domains and entity types remains a challenge,
+            a fact that is compounded by the need to develop new datasets representative of the new domain, followed by fine-tuning NER classifiers
+            to correctly detect new entity types in the new domain.
           </p>
           <p>
-            Recognizing the need to create NER datasets for new domains and entity types efficiently, we make two succinct contributions: 
-            1) We propose a framework RapidNER to annotate NER datasets by utilizing off-the-shelf tools. Specifically, we exploit the
-            search functions inside ES and successfully develop an annotation method for NER data. 
-            2) We focus on human-robot interaction (HRI) applications and develop a new dataset named NERsocial comprising the entity types that are suitable for interaction between humans and a social robot1 (Figure 1).
-            Consequently, we sought texts that represent the natural conversational style embedded in human dialogue. Our textual sources include social media
-            (Reddit) and online forums (Stack Exchange). Aiming for diversity in texts, we included Wikipedia as
-            a complimentary textual source, which provides a rich contextual narrative for all entities. Figure 2 shows all the textual sources.
+            Recognizing the need to create NER datasets for new domains and entity types efficiently, we make two succinct contributions:
+            1) We propose a framework RapidNER to annotate NER datasets by utilizing off-the-shelf tools.
+            Specifically, we exploit the search functions inside ES and successfully develop an annotation method for NER data.
+            2) We focus on human-robot interaction (HRI) applications and develop a new dataset named NERsocial comprising the entity types
+            that are suitable for interaction between humans and a social robot (Figure 1).
+            Consequently, we sought texts that represent the natural conversational style embedded in human dialogue.
+            Our textual sources include social media (Reddit) and online forums (Stack Exchange).
+            Aiming for diversity in texts, we included Wikipedia as a complimentary textual source, which provides a rich contextual narrative for all entities.
+            Figure 2 shows all the textual sources.
           </p>
           <p>
             NERsocial is not the first attempt by NER researchers to design new specifications of NE labels to develop NER datasets suited for new domains.
-            We follow the footsteps of domain-specific and unconventional efforts, such as Epure and Hennequin (2023), to create our NER dataset NERsocial. NERsocial consists of six entity types: drinks, foods, hobbies, jobs, pets, and sports, which are typical
-            of social interactions in HRI, and Figure 1 shows an example of a human-robot dialogue. While creating NERsocial, we needed to acquire knowledge about each entity type. Consequently, we sought to
-            answer the research question: how can we quickly gather entity information relevant to unseen entities, such as pets? Hence, we chose the KG approach to gather such entity knowledge in the form
-            of KG triples which guided the development of our NER dataset. This process is summarized in Figure 3. In addition, KG triples enabled us to solve
-            another problem, that is, how to increase the coverage and diversity of each NE? Concretely, KG triples guided the extraction of a large number of diverse pages (articles) from Wikipedia. In turn,
-            the pages were the source of sentences used to construct the dataset coupled with the texts gathered
-            from social media and online forums. The last challenge we faced was: how to annotate the thousands of sentences with less human effort? We utilized the search functions inside Elasticsearch to develop
-            an annotation scheme that took only a few seconds to mark spans of entity mentions.
+            We follow the footsteps of domain-specific and unconventional efforts, such as Epure and Hennequin (2023), to create our NER dataset NERsocial.
+            NERsocial consists of six entity types: drinks, foods, hobbies, jobs, pets, and sports, which are typical of social interactions in HRI,
+            and Figure 1 shows an example of a human-robot dialogue.
+            While creating NERsocial, we needed to acquire knowledge about each entity type.
+            Consequently, we sought to answer the research question:
+            how can we quickly gather entity information relevant to unseen entities, such as pets?
+            Hence, we chose the KG approach to gather such entity knowledge in the form of KG triples which guided the development of our NER dataset.
+            This process is summarized in Figure 3.
+            In addition, KG triples enabled us to solve another problem, that is, how to increase the coverage and diversity of each NE?
+            Concretely, KG triples guided the extraction of a large number of diverse pages (articles) from Wikipedia.
+            In turn, the pages were the source of sentences used to construct the dataset coupled with the texts gathered from social media and online forums.
+            The last challenge we faced was: how to annotate the thousands of sentences with less human effort?
+            We utilized the search functions inside Elasticsearch to develop an annotation scheme that took only a few seconds to mark spans of entity mentions.
           </p>
         </div>
       </div>
@@ -204,7 +209,6 @@
   </div>
 </section>
 
-<!-- Elasticsearch Annotation Scheme (Dataset Creation) Section -->
 <section class="section">
   <div class="container is-max-desktop">
     <div class="columns is-centered">
@@ -212,29 +216,30 @@
         <h2 class="title is-3">Elasticsearch Annotation Scheme</h2>
         <div class="content has-text-justified">
           <p>
-            Our Elasticsearch (ES) annotation scheme represents an efficient approach to annotating named entity recognition datasets, significantly reducing the required time and effort. 
-            While manual annotation methods like Doccano typically take about 1 minute per sentence, the ES scheme accomplishes the same task in just 0.9 milliseconds. 
-            The process begins with importing sentences into ES as CSV files, using specific mapping configurations that support the "fast vector highlighter" (fvh) capability. 
-            This is achieved by setting "term_vector":"with_positions_offsets" on the text column. 
-            The fvh feature is crucial as it ensures compound terms remain intact during searches and enables perfect string matching. 
-            ES then searches for entity mentions using dictionaries derived from Wikidata KG, automatically marking matching text spans with <em> tags. 
-            This allows for rapid annotation of thousands of sentences simultaneously, after which human annotators verify and correct the ES-generated annotations before 
-              converting the marked spans to BIO tags for the final NER dataset.
+            Our Elasticsearch (ES) annotation scheme represents an efficient approach to annotating named entity recognition datasets,
+            significantly reducing the required time and effort.
+            While manual annotation methods like Doccano typically take about 1 minute per sentence, the ES scheme accomplishes the same task in just 0.9 milliseconds.
+            The process begins with importing sentences into ES as CSV files, using specific mapping configurations that support the "fast vector highlighter" (fvh) capability.
+            This is achieved by setting "term_vector":"with_positions_offsets" on the text column.
+            The fvh feature is crucial as it ensures compound terms remain intact during searches and enables perfect string matching.
+            ES then searches for entity mentions using dictionaries derived from Wikidata KG, automatically marking matching text spans with &lt;em&gt; tags.
+            This allows for rapid annotation of thousands of sentences simultaneously, after which human annotators verify and correct the ES-generated annotations before
+            converting the marked spans to BIO tags for the final NER dataset.
           </p>
           <p>
-            We selected Elasticsearch for this task due to its unique search capabilities that make it particularly suitable for entity annotation. 
-            The fast vector highlighter allows for accurate matching of multi-word entities, while ES's efficient search capabilities enable it to process large volumes of 
-            text quickly when finding entity mentions. The search space is defined by entity dictionaries obtained from Wiki-KG, and 
-            ES provides high-speed full text search with good precision in matching. The system's scalability allows it to process thousands of sentences 
-            rapidly while maintaining annotation quality through its automated approach. This methodology represents a significant improvement over fully 
-            manual annotation methods in terms of both time and cost efficiency, while still ensuring accurate and reliable entity recognition results 
-            through human verification of the machine-generated annotations.
-          </p> 
+            We selected Elasticsearch for this task due to its unique search capabilities that make it particularly suitable for entity annotation.
+            The fast vector highlighter allows for accurate matching of multi-word entities, while ES's efficient search capabilities enable it to process large volumes of
+            text quickly when finding entity mentions.
+            The search space is defined by entity dictionaries obtained from Wiki-KG, and
+            ES provides high-speed full text search with good precision in matching.
+            The system's scalability allows it to process thousands of sentences rapidly while maintaining annotation quality through its automated approach.
+            This methodology represents a significant improvement over fully manual annotation methods in terms of both time and cost efficiency,
+            while still ensuring accurate and reliable entity recognition results through human verification of the machine-generated annotations.
+          </p>
         </div>
       </div>
     </div>
 
-    <!-- Figures (Two on top row, one full-width on second row) -->
     <div class="columns is-centered">
       <div class="column has-text-centered">
         <object data="./static/images/SourcesOfText2.pdf" type="application/pdf" style="width:100%; height:5cm;"></object>
@@ -255,15 +260,14 @@
   </div>
 </section>
 
-<!-- Data characteristics Section -->
 <section class="section">
   <div class="container is-max-desktop">
     <h2 class="title is-3">Data characteristics</h2>
     <div class="content has-text-justified">
       <p>
-        The characteristics of NERsocial are shown in Table 4. Overall, there are 153,102 entity tokens, 
-        134,074 entities, and 99,448 sentences for six entity types. We gathered most of the entity 
-        information from Stack Exchange. Table 6 shows a comparison between NERsocial and common 
+        The characteristics of NERsocial are shown in Table 4. Overall, there are 153,102 entity tokens,
+        134,074 entities, and 99,448 sentences for six entity types. We gathered most of the entity
+        information from Stack Exchange. Table 6 shows a comparison between NERsocial and common
         NER datasets: OntoNotes, WikiGold, CoNLL2003, WNUT17, I2B2 and FEW-NERD.
       </p>
     </div>
@@ -280,33 +284,30 @@
   </div>
 </section>
 
-<!-- Dataset Viewer Section -->
 <section class="section">
   <div class="container is-max-desktop">
     <h2 class="title is-3">Dataset Viewer</h2>
     <div class="content has-text-centered">
       <p>View the dataset on Hugging Face:</p>
-      <a href="https://huggingface.co/datasets/atamiles/NERsocial" 
+      <a href="https://huggingface.co/datasets/atamiles/NERsocial"
          class="button is-dark is-rounded" target="_blank">Open Dataset Viewer</a>
     </div>
   </div>
 </section>
 
-<!-- Acknowledgment Section -->
 <section class="section">
   <div class="container is-max-desktop">
     <h2 class="title is-3">Acknowledgment</h2>
     <div class="content has-text-justified">
       <p>
-        This work was done during the development of HARU under the mentorship of Eric Nichols at 
-        Honda Research Institute Japan (HRI-JP). We thank him for overseeing the creation of datasets, 
+        This work was done during the development of HARU under the mentorship of Eric Nichols at
+        Honda Research Institute Japan (HRI-JP). We thank him for overseeing the creation of datasets,
         providing access to compute resources and the robot during Jesse’s internship at HRI-JP.
       </p>
     </div>
   </div>
 </section>
 
-<!-- BibTeX Section -->
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
@@ -317,12 +318,11 @@
   eprint={2412.09634},
   archivePrefix={arXiv},
   primaryClass={cs.CL},
-  url={https://arxiv.org/abs/2412.09634}, 
+  url={https://arxiv.org/abs/2412.09634}
 }</code></pre>
   </div>
 </section>
 
-</body> 
 <footer class="footer">
   <div class="container">
     <div class="content has-text-centered">
@@ -330,29 +330,12 @@
       <p>
         The data is provided under an MIT license, so feel free to use it outside of research purposes.
       </p>
-      
-      <!-- 
-      <h2>Template Acknowledgment</h2> 
-      -->
-      
       <p>
         This website template is borrowed from <a href="https://nerfies.github.io">Nerfies</a>.
       </p>
-      
-       <!-- <p>
-        This website is adapted from the 
-        <a href="https://nerfies.github.io">Nerfies website</a>, licensed under a 
-        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
-          <img alt="Creative Commons License" style="border-width:0" 
-               src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" />
-        </a><br />
-        Hence, this work is licensed under a 
-        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
-          Creative Commons Attribution-ShareAlike 4.0 International License
-        </a> too.
-      </p> -->
     </div>
   </div>
 </footer>
-  
+
+</body>
 </html>
